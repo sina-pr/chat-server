@@ -7,7 +7,7 @@ const joinNewUser = require('../game/game');
 
 // initialize app
 const app = express();
-const server = http.createServer(app);
+var server = app.listen(3000);
 const io = socketio(server, {
   cors: {
     origin: 'http://localhost:3000',
@@ -23,7 +23,6 @@ let messages = [
   },
 ];
 
-server.listen(443);
 io.on('connection', (socket) => {
   console.log('NEW USER CONNECTED');
   // socket.on('join', (data) => {

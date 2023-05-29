@@ -19,7 +19,7 @@ async function bootstrap() {
   app.use('/products', productsRoutes);
   app.use('/users', usersRoutes);
 
-  app.listen(PORT, () => {
+  app.listen(3001, () => {
     console.log(`✅ Server is listening on port: ${PORT}`);
   });
 }
