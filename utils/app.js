@@ -10,7 +10,7 @@ const app = express();
 var server = app.listen(3000);
 const io = socketio(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: '*',
   },
 });
 
